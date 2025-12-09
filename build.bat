@@ -67,37 +67,13 @@ if %errorlevel% neq 0 (
 echo [OK] Build thanh cong.
 echo.
 
-:: 4. DI CHUYỂN FILE EXE VÀ DỌN DẸP SAU KHI BUILD
-echo [BUOC 3/4] Dang xu ly file thanh pham...
-
-if exist "dist\%EXE_NAME%.exe" (
-    echo   - Di chuyen '%EXE_NAME%.exe' ra thu muc goc...
-    move /y "dist\%EXE_NAME%.exe" . >nul
-) else (
-    echo [LOI] Khong tim thay file EXE trong thu muc dist!
-    pause
-    exit
-)
-
-echo.
+:: 4. DỌN DẸP SAU KHI BUILD
 echo [BUOC 4/4] Don dep file tam sau khi build...
 if exist build (
     echo   - Xoa thu muc 'build'...
     rmdir /s /q build
 )
-if exist dist (
-    echo   - Xoa thu muc 'dist'...
-    rmdir /s /q dist
-)
 if exist "%EXE_NAME%.spec" (
     echo   - Xoa file '%EXE_NAME%.spec'...
     del /q "%EXE_NAME%.spec"
 )
-
-echo.
-echo ========================================================
-echo        HOAN TAT! FILE EXE DA SAN SANG.
-echo ========================================================
-echo File cua ban: %CD%\%EXE_NAME%.exe
-echo.
-pause

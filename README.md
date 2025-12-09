@@ -1,7 +1,9 @@
-# 🖨️ Printer Registry Manager (Portable)
+# 🖨️ Printer Manager (Portable)
 
-**Công cụ Sửa lỗi & Xóa Máy in Tận gốc trên Windows**  
-*Phiên bản: 1.0 (Build 091225)*  
+![Giao diện Printer Manager](app.png)
+
+**Công cụ Quản lý & Sửa lỗi Máy in Toàn diện trên Windows**  
+*Phiên bản: 1.3.2 (Final)*  
 *Tác giả: @danhcp*
 
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg?style=flat-square)
@@ -10,61 +12,72 @@
 
 ## 📖 Giới thiệu
 
-**Printer Registry Manager** là phần mềm dạng **Portable** (chạy ngay không cần cài đặt), được thiết kế để giải quyết các sự cố máy in phổ biến mà công cụ Windows mặc định không xử lý được.
+**Printer Manager** là phần mềm dạng **Portable** (chạy ngay không cần cài đặt), ban đầu được thiết kế để sửa lỗi máy in "cứng đầu". Ở phiên bản mới nhất, công cụ đã được nâng cấp thành một trình quản lý máy in mạnh mẽ, thay thế hoàn hảo cho giao diện Control Panel cũ kỹ.
 
-Công cụ này đặc biệt hữu ích khi:
-*   Máy in bị kẹt, không thể xóa (Remove device không có tác dụng).
-*   Lỗi "Driver is in use" hoặc không thể cài lại driver mới.
-*   Máy in bị kẹt lệnh in (Queue) không thể hủy.
-*   Cần dọn dẹp sạch sẽ hệ thống máy in cũ.
+Công cụ này giải quyết các vấn đề:
+*   Máy in bị kẹt, không thể xóa (Remove device không tác dụng).
+*   Cần xem chi tiết ai đang in, file gì, dung lượng bao nhiêu (Soi lệnh in).
+*   Quản lý bật/tắt chia sẻ (Share LAN) nhanh chóng.
+*   Kiểm tra kết nối mạng (Ping IP) của máy in.
 
-## ✨ Tính năng nổi bật
+## ✨ Tính năng nổi bật (v1.3.2)
 
-1.  **🗑️ Xóa Máy In Tận Gốc:** Can thiệp sâu vào Registry để xóa bỏ máy in và Driver đi kèm (ngay cả khi bị lỗi).
-2.  **🧹 Xóa Lệnh In Kẹt (Clear Queue):** Một cú click để xóa sạch toàn bộ lệnh in đang bị treo trong hệ thống.
-3.  **♻️ Tự Động Xử Lý Spooler:** Tự động Tắt/Bật dịch vụ Print Spooler để đảm bảo quá trình xóa không bị lỗi "Access Denied".
-4.  **🚀 Không Cần Cài Đặt:** Chỉ cần tải về 1 file `.exe` duy nhất và chạy.
-5.  **🛠️ Công Cụ Hỗ Trợ:** Tích hợp nút mở nhanh *Print Management* và *Pnputil* để kiểm tra hệ thống.
+### 🛠️ Sửa lỗi & Dọn dẹp
+1.  **Xóa Máy In Tận Gốc:** Can thiệp Registry để xóa bỏ máy in và Driver (kèm tính năng **Auto Backup** trước khi xóa).
+2.  **Xóa Lệnh In Kẹt (Clear Queue):** Xóa sạch toàn bộ lệnh in treo chỉ với 1 click.
+3.  **Tự Động Xử Lý Spooler:** Tự động Restart dịch vụ Print Spooler để tránh lỗi.
+
+### 📊 Quản lý & Tiện ích
+4.  **Menu Chuột Phải Thông Minh:**
+    *   ⭐ Đặt máy in mặc định (Set Default).
+    *   🔄 Bật/Tắt chia sẻ mạng LAN (Toggle Sharing).
+    *   📄 Xem chi tiết hàng đợi in.
+    *   🖨️ In trang Test (Windows Test Page).
+5.  **Soi Lệnh In (Queue Viewer):** Xem danh sách file đang chờ in (Tên tài liệu, Người in, Số trang, Dung lượng KB/MB).
+6.  **Xuất Báo Cáo:** Xuất danh sách toàn bộ máy in ra file Excel (`.csv`) để kiểm kê tài sản.
+7.  **Công Cụ Mạng:** Tự động tách IP từ cổng máy in và Ping kiểm tra kết nối.
+
+### 🪟 Tích hợp Hệ thống
+8.  **Truy cập nhanh:** Mở nhanh *Print Management (MSC)* và *Devices & Printers*.
+9.  **Nhật ký (Log):** Tự động lưu lịch sử thao tác vào file `nhat_ky_hoat_dong.log`.
 
 ## 💻 Yêu cầu hệ thống
 
-*   **Hệ điều hành:** Windows 7, Windows 10, Windows 11 (32-bit & 64-bit).
+*   **Hệ điều hành:** Windows 7, 10, 11 (32-bit & 64-bit).
 *   **Quyền hạn:** Bắt buộc chạy bằng quyền **Administrator**.
 
 ## 📝 Hướng dẫn sử dụng
 
-### Bước 1: Mở phần mềm
-Do phần mềm can thiệp vào hệ thống (Registry & Services), bạn **BẮT BUỘC** phải mở như sau:
+### Bước 1: Khởi động
+Do phần mềm can thiệp sâu vào hệ thống, bạn **BẮT BUỘC** phải:
 1.  Nhấn chuột phải vào file `PrinterManager.exe`.
-2.  Chọn **Run as Administrator** (Chạy với tư cách quản trị viên).
+2.  Chọn **Run as Administrator**.
 
-### Bước 2: Quét danh sách
-*   Tại giao diện chính, nhấn nút **🔄 Quét / Làm mới**.
-*   Danh sách các máy in hiện có trong Registry sẽ hiện ra (kèm tên Driver và Cổng kết nối).
+### Bước 2: Các thao tác chính
+*   **Quét danh sách:** Nhấn **🔄 Quét / Làm mới** để tải danh sách máy in từ Registry.
+*   **Menu nhanh:** **Click chuột phải** vào một dòng máy in bất kỳ để hiện menu (Đặt mặc định, Share, In test...).
+*   **Xóa máy in:** Chọn máy in ➔ Nhấn **🗑️ XÓA**. (File backup sẽ được lưu tại thư mục `Backup/`).
 
-### Bước 3: Xử lý sự cố
-*   **Để xóa máy in:** Chọn tên máy in trong danh sách ➔ Nhấn **🗑️ XÓA MÁY IN ĐANG CHỌN** ➔ Chọn *Yes* để xác nhận.
-*   **Để sửa lỗi kẹt lệnh in:** Nhấn nút **🧹 Xóa lệnh in bị kẹt**.
-*   **Để khởi động lại dịch vụ in:** Nhấn nút **♻️ Khởi động lại Spooler**.
-
-### Bước 4: Hoàn tất
-*   Sau khi thực hiện xong các thao tác, vui lòng **Khởi động lại máy tính (Restart)** để Windows cập nhật lại cấu hình sạch.
+### Bước 3: Quản lý nâng cao
+*   **Xem ai đang in:** Chọn máy in ➔ Nhấn **📄 Soi Lệnh In (Queue)**.
+*   **Xuất Excel:** Nhấn **📥 Xuất Báo Cáo** để lưu file `.csv`.
+*   **Công cụ Windows:** Sử dụng nhóm nút bên phải để mở *Print Management* hoặc *Control Panel Printers*.
 
 ---
 
 ## ⚠️ Lưu ý quan trọng
 
-1.  **An toàn dữ liệu:** Phần mềm thực hiện thay đổi trên Registry. Mặc dù đã được kiểm tra kỹ lưỡng, bạn nên cẩn trọng khi xóa các máy in hệ thống (như *Microsoft Print to PDF*, *Fax*...). Chỉ nên xóa các máy in vật lý bị lỗi.
-2.  **Phần mềm chống virus:** Một số phần mềm diệt virus có thể cảnh báo nhầm do file `.exe` can thiệp vào Registry. Đây là hành vi bình thường của công cụ sửa lỗi hệ thống.
+1.  **An toàn dữ liệu:** Phần mềm có tính năng tự động Backup Registry trước khi xóa. Tuy nhiên, hãy cẩn trọng khi thao tác với các máy in hệ thống (Microsoft Print to PDF, Fax...).
+2.  **Phần mềm diệt virus:** Một số trình diệt virus có thể cảnh báo nhầm do hành vi can thiệp Registry. Đây là điều bình thường với các công cụ dạng System Tools.
 
 ---
 
 ## 📞 Thông tin liên hệ & Hỗ trợ
 
-Nếu bạn gặp vấn đề khi sử dụng hoặc muốn góp ý tính năng mới vui lòng tự làm vì đây là vibecode :))
+Nếu bạn gặp vấn đề khi sử dụng hoặc muốn góp ý tính năng mới, vui lòng... **tự làm** vì đây là **vibecode** (code vì đam mê) :))
 
 *   **Tác giả:** @danhcp
-*   **Phiên bản:** 1.0 Stable
+*   **Phiên bản:** 1.3.2 Final
 
 ---
 *Cảm ơn bạn đã sử dụng Printer Registry Manager!*
