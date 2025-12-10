@@ -3,7 +3,7 @@
 ![Giao diện Printer Manager](app.png)
 
 **Công cụ Quản lý & Sửa lỗi Máy in Toàn diện trên Windows**  
-*Phiên bản: 1.3.2 (Final)*  
+*Phiên bản: 1.4.2 (Latest)*  
 *Tác giả: @danhcp*
 
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg?style=flat-square)
@@ -12,72 +12,72 @@
 
 ## 📖 Giới thiệu
 
-**Printer Manager** là phần mềm dạng **Portable** (chạy ngay không cần cài đặt), ban đầu được thiết kế để sửa lỗi máy in "cứng đầu". Ở phiên bản mới nhất, công cụ đã được nâng cấp thành một trình quản lý máy in mạnh mẽ, thay thế hoàn hảo cho giao diện Control Panel cũ kỹ.
+**Printer Manager** là phần mềm dạng **Portable** (chạy ngay không cần cài đặt), được thiết kế để thay thế giao diện quản lý máy in cũ kỹ của Windows bằng một giao diện tập trung, trực quan và mạnh mẽ hơn.
 
-Công cụ này giải quyết các vấn đề:
-*   Máy in bị kẹt, không thể xóa (Remove device không tác dụng).
-*   Cần xem chi tiết ai đang in, file gì, dung lượng bao nhiêu (Soi lệnh in).
-*   Quản lý bật/tắt chia sẻ (Share LAN) nhanh chóng.
-*   Kiểm tra kết nối mạng (Ping IP) của máy in.
+Công cụ giúp IT Helpdesk và người dùng văn phòng giải quyết nhanh các vấn đề:
+*   Máy in bị kẹt lệnh, không thể xóa ("Remove device" không tác dụng).
+*   Hệ thống chứa quá nhiều Driver rác gây xung đột.
+*   Cần xem chi tiết ai đang in, file gì (Soi lệnh in).
+*   Quản lý Share LAN và IP máy in tức thì.
 
-## ✨ Tính năng nổi bật (v1.3.2)
+## ✨ Tính năng nổi bật (v1.4.2)
 
-### 🛠️ Sửa lỗi & Dọn dẹp
-1.  **Xóa Máy In Tận Gốc:** Can thiệp Registry để xóa bỏ máy in và Driver (kèm tính năng **Auto Backup** trước khi xóa).
-2.  **Xóa Lệnh In Kẹt (Clear Queue):** Xóa sạch toàn bộ lệnh in treo chỉ với 1 click.
-3.  **Tự Động Xử Lý Spooler:** Tự động Restart dịch vụ Print Spooler để tránh lỗi.
+### 🛠️ Sửa lỗi & Dọn dẹp Hệ thống
+1.  **Xóa Máy In Tận Gốc:** Can thiệp Registry để xóa bỏ máy in cứng đầu (kèm tính năng **Auto Backup** Registry trước khi xóa để đảm bảo an toàn).
+2.  **🧹 Dọn dẹp Driver Rác (MỚI):** Tự động quét và phát hiện các Driver (V3, V4) không còn được sử dụng bởi bất kỳ máy in nào và cho phép xóa chúng để giải phóng hệ thống.
+3.  **Xóa Lệnh Kẹt (Clear Queue):** Xóa sạch toàn bộ lệnh in đang treo (Spool files) chỉ với 1 click.
+4.  **Tự Động Xử Lý Spooler:** Tích hợp nút Restart dịch vụ Print Spooler nhanh chóng mà không cần vào Services.msc.
 
 ### 📊 Quản lý & Tiện ích
-4.  **Menu Chuột Phải Thông Minh:**
+5.  **Menu Chuột Phải Thông Minh:**
     *   ⭐ Đặt máy in mặc định (Set Default).
+    *   ⚙️ Mở nhanh **Printing Preferences** & **Printer Properties** (Rất tiện lợi thay vì phải tìm trong Control Panel).
     *   🔄 Bật/Tắt chia sẻ mạng LAN (Toggle Sharing).
-    *   📄 Xem chi tiết hàng đợi in.
+    *   📄 Xem chi tiết hàng đợi in (Queue).
     *   🖨️ In trang Test (Windows Test Page).
-5.  **Soi Lệnh In (Queue Viewer):** Xem danh sách file đang chờ in (Tên tài liệu, Người in, Số trang, Dung lượng KB/MB).
-6.  **Xuất Báo Cáo:** Xuất danh sách toàn bộ máy in ra file Excel (`.csv`) để kiểm kê tài sản.
-7.  **Công Cụ Mạng:** Tự động tách IP từ cổng máy in và Ping kiểm tra kết nối.
+    *   🗑️ Xóa máy in.
+6.  **Soi Lệnh In (Queue Viewer):** Xem danh sách file đang chờ in (Tên tài liệu, Người in, Số trang, Dung lượng KB/MB, Thời gian in).
+7.  **Xuất Báo Cáo:** Xuất danh sách toàn bộ máy in ra file Excel (`.csv`) bao gồm: Tên, Cổng (Port), Driver, Trạng thái chia sẻ.
+8.  **Công Cụ Mạng:** Tự động tách IP từ cổng máy in và Ping kiểm tra kết nối (Online/Offline) ngay trên menu chuột phải.
 
 ### 🪟 Tích hợp Hệ thống
-8.  **Truy cập nhanh:** Mở nhanh *Print Management (MSC)* và *Devices & Printers*.
-9.  **Nhật ký (Log):** Tự động lưu lịch sử thao tác vào file `nhat_ky_hoat_dong.log`.
+9.  **Lối tắt tiện dụng:**
+    *   ➕ **Thêm Máy In:** Mở nhanh giao diện Add Printer của Windows Settings.
+    *   Mở nhanh *Print Management (MSC)* và *Devices & Printers*.
+10. **Nhật ký (Log):** Tự động lưu lịch sử thao tác vào file `activity.log` để tra cứu lỗi.
+11. **Giao diện tối ưu:** Đã cập nhật lại thứ tự cột hiển thị (Port đứng trước Driver) giúp dễ quan sát IP máy in hơn.
 
 ## 💻 Yêu cầu hệ thống
 
 *   **Hệ điều hành:** Windows 7, 10, 11 (32-bit & 64-bit).
-*   **Quyền hạn:** Bắt buộc chạy bằng quyền **Administrator**.
+*   **Quyền hạn:** Bắt buộc chạy bằng quyền **Administrator** (Do phần mềm can thiệp Service và Registry).
 
 ## 📝 Hướng dẫn sử dụng
 
 ### Bước 1: Khởi động
-Do phần mềm can thiệp sâu vào hệ thống, bạn **BẮT BUỘC** phải:
-1.  Nhấn chuột phải vào file `PrinterManager.exe`.
-2.  Chọn **Run as Administrator**.
+Nhấn chuột phải vào file `PrinterManager.exe` ➔ Chọn **Run as Administrator**.
 
 ### Bước 2: Các thao tác chính
 *   **Quét danh sách:** Nhấn **🔄 Quét / Làm mới** để tải danh sách máy in từ Registry.
-*   **Menu nhanh:** **Click chuột phải** vào một dòng máy in bất kỳ để hiện menu (Đặt mặc định, Share, In test...).
-*   **Xóa máy in:** Chọn máy in ➔ Nhấn **🗑️ XÓA**. (File backup sẽ được lưu tại thư mục `Backup/`).
+*   **Thao tác nhanh:** **Click chuột phải** vào dòng máy in bất kỳ để mở Menu chức năng (In test, Ping IP, Chia sẻ...).
+*   **Dọn dẹp Driver:** Nhấn **🧹 Xóa Driver không sử dụng** ➔ Phần mềm sẽ liệt kê các driver thừa ➔ Chọn và xóa (Spooler sẽ tự khởi động lại).
 
 ### Bước 3: Quản lý nâng cao
-*   **Xem ai đang in:** Chọn máy in ➔ Nhấn **📄 Soi Lệnh In (Queue)**.
+*   **Xem ai đang in:** Chuột phải vào máy in ➔ Chọn **📄 Xem chi tiết Lệnh in**.
 *   **Xuất Excel:** Nhấn **📥 Xuất Báo Cáo** để lưu file `.csv`.
-*   **Công cụ Windows:** Sử dụng nhóm nút bên phải để mở *Print Management* hoặc *Control Panel Printers*.
 
 ---
 
 ## ⚠️ Lưu ý quan trọng
 
-1.  **An toàn dữ liệu:** Phần mềm có tính năng tự động Backup Registry trước khi xóa. Tuy nhiên, hãy cẩn trọng khi thao tác với các máy in hệ thống (Microsoft Print to PDF, Fax...).
-2.  **Phần mềm diệt virus:** Một số trình diệt virus có thể cảnh báo nhầm do hành vi can thiệp Registry. Đây là điều bình thường với các công cụ dạng System Tools.
+1.  **Backup:** Phần mềm tự động tạo file `.reg` sao lưu cấu hình máy in vào thư mục `Backup/` trước khi bạn thực hiện xóa máy in.
+2.  **Antivirus:** Một số trình diệt virus có thể cảnh báo nhầm do hành vi can thiệp Registry/Stop Service. Vui lòng thêm vào danh sách loại trừ nếu cần thiết.
 
 ---
 
-## 📞 Thông tin liên hệ & Hỗ trợ
-
-Nếu bạn gặp vấn đề khi sử dụng hoặc muốn góp ý tính năng mới, vui lòng... **tự làm** vì đây là **vibecode** (code vì đam mê) :))
-
+## 📞 Thông tin
 *   **Tác giả:** @danhcp
-*   **Phiên bản:** 1.3.2 Final
+*   **Phiên bản:** 1.4.2
 
 ---
-*Cảm ơn bạn đã sử dụng Printer Registry Manager!*
+*Cảm ơn bạn đã sử dụng Printer Manager!*
