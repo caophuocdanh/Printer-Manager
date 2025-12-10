@@ -3,8 +3,8 @@ title Build Printer Registry Manager
 color 0A
 
 :: --- CẤU HÌNH ---
-set PYTHON_FILE=PrinterManager.py
-set EXE_NAME=PrinterManager
+set PYTHON_FILE=PrinterManager - v2.py
+set EXE_NAME=PrinterManager_v2
 set ICON_FILE=printer.ico
 
 cls

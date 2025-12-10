@@ -3,7 +3,7 @@
 ![Giao diện Printer Manager](app.png)
 
 **Công cụ Quản lý & Sửa lỗi Máy in Toàn diện trên Windows**  
-*Phiên bản: 1.4.2 (Latest)*  
+*Phiên bản: 2.2.1 (Latest)*  
 *Tác giả: @danhcp*
 
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D6.svg?style=flat-square)
@@ -20,7 +20,7 @@ Công cụ giúp IT Helpdesk và người dùng văn phòng giải quyết nhanh
 *   Cần xem chi tiết ai đang in, file gì (Soi lệnh in).
 *   Quản lý Share LAN và IP máy in tức thì.
 
-## ✨ Tính năng nổi bật (v1.4.2)
+## ✨ Tính năng nổi bật (v2.2.1)
 
 ### 🛠️ Sửa lỗi & Dọn dẹp Hệ thống
 1.  **Xóa Máy In Tận Gốc:** Can thiệp Registry để xóa bỏ máy in cứng đầu (kèm tính năng **Auto Backup** Registry trước khi xóa để đảm bảo an toàn).
@@ -77,7 +77,7 @@ Nhấn chuột phải vào file `PrinterManager.exe` ➔ Chọn **Run as Adminis
 
 ## 📞 Thông tin
 *   **Tác giả:** @danhcp
-*   **Phiên bản:** 1.4.2
+*   **Phiên bản:** 2.2.1
 
 ---
 *Cảm ơn bạn đã sử dụng Printer Manager!*
